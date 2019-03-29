@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Components</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            p {
+                position: relative;
+            }
+
+            div {
+                text-decoration: underline;
+            }
+
+            .bg-orange {
+                background-color: orangered;
+            }
+
+            /*zingat-tooltip {
+                border: 1px solid forestgreen;
+            }*/
+        </style>
+
+        <script src="zingat-hello-world.js"></script>
+        <script src="zingat-tooltip.js"></script>
+        <script src="zingat-link.js"></script>
+        <script type="module" src="zingat-tooltip-lit-element.js"></script>
+        <script type="module" src="zingat-tooltip-lit-element-2.js"></script>
+    </head>
+
+    <body>
+        <zingat-hello-world></zingat-hello-world>
+
+        <!--<template id="zingat-tooltip-icon-template">
+            <style>
+                span {
+                    cursor: pointer;
+                }
+            </style>
+            <slot></slot><span>*</span>
+        </template>-->
+
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores error fugiat itaque laborum nesciunt non perferendis possimus, provident quo. Aliquam aspernatur consectetur cum debitis deleniti error, fuga placeat vero!</p>
+        </div>
+
+        <p class="info-content">
+            <zingat-tooltip text="Zingat tarafından periyodik olarak düzenlenen bir yazılımcı etkinliğidir.">Zeetup'a</zingat-tooltip> Hoşgeldiniz!
+        </p>
+
+        <p>
+            <zingat-tooltip><span class="bg-orange">Zeetup'a</span></zingat-tooltip> Hoşgeldiniz!
+        </p>
+
+        <p>
+            <zingat-tooltip text="Zingat'ın şahane etkinliği!">Zeetup'a</zingat-tooltip> Hoşgeldiniz!
+        </p>
+
+        <p>
+            <zingat-tooltip class="attention" text="Çok başarılı teknoloji sohbetleri gerçekleşti." bg-color="red">Zeetup'a</zingat-tooltip> Hoşgeldiniz!
+        </p>
+
+        <p>
+            <a href="https://www.zingat.com" is="zingat-link">Zingat'a git</a>
+        </p>
+
+        <p>
+            <zingat-tooltip-lit-element text="Çok başarılı teknoloji sohbetleri gerçekleşti.">Zeetup'a</zingat-tooltip-lit-element> Hoşgeldiniz!
+        </p>
+
+        <p>
+            <zingat-tooltip-lit-element-2 text="Çok başarılı teknoloji sohbetleri gerçekleşti.">Zeetup'a</zingat-tooltip-lit-element-2> Hoşgeldiniz!
+        </p>
+    </body>
+</html>
